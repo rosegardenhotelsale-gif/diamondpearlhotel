@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamant Hotel Resort</title>
+    <!-- Fonts: Playfair Display for headings, Jost for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS for Gallery Carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="hero-wrapper" id="home">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container top-bar-container">
+                <div class="top-contact">
+                    <span class="label">CALL:</span> <span class="value">+85523 ​999​ 166</span>
+                </div>
+
+                <div class="top-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+
+                <div class="top-right">
+                    <div class="lang-switch">
+                        <span class="active">En</span> / <span>CN</span>
+                    </div>
+                    <div class="booking-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="booking-text" style="display: none;">Our ratings on Booking.com</span>
+                        <div class="score">4.9</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <img src="./img/logo/logo.png" alt="Diamond Pearl Hotel" class="header-logo"
+                        style="height: 90px; width: auto;">
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home" class="active">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#rooms">ROOMS</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#contacts">CONTACTS</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="primary-btn search-btn">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        BOOK NOW
+                    </button>
+                    <div class="mobile-menu-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Content -->
+        <main class="hero-content">
+            <div class="hero-text-container">
+                <p class="subtitle">Enjoy your time in our Hotel with pleasure.</p>
+                <div class="separator-line"></div>
+                <h2 class="main-title">A NEW VISION OF COMFORT</h2>
+                <div class="separator-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                            stroke="#D4AF37" stroke-width="1.5" fill="none" />
+                    </svg>
+                </div>
+                <button class="outline-btn">VIEW OUR ROOMS</button>
+            </div>
+        </main>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <div class="nav-arrow prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="nav-arrow next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <!-- Bottom Pagination -->
+        <div class="hero-bottom">
+            <div class="pagination">
+                <span class="dot"></span>
+                <span class="dot outline active">
+                    <span class="inner-dot"></span>
+                </span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content (Breadcrumbs) -->
+    <div class="page-content">
+        <div class="container breadcrumbs">
+            <span class="current">HOME</span>
+            <i class="fa-solid fa-caret-right"></i>
+            <span class="path">HOME SLIDER</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-grid-bg">
+            <div class="grid-line horizontal"></div>
+            <div class="grid-line horizontal-bottom"></div>
+            <div class="grid-line vertical"></div>
+            <div class="grid-line vertical-right"></div>
+            <div class="diamond-icon left">
+                <i class="fa-solid fa-diamond"></i>
+            </div>
+            <div class="diamond-icon right">
+                <i class="fa-solid fa-diamond"></i>
+            </div>
+        </div>
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="about-subtitle">Enjoy your time in our Hotel</span>
+                <h2 class="about-title">About Our Hotel</h2>
+                <div class="about-text-wrapper">
+                    <span class="drop-cap">D</span>
+                    <p class="about-text">iamond Pearl Hotel & Residence is a modern and comfortable hotel in Phnom
+                        Penh, offering a relaxing stay for both business and leisure travelers. Conveniently located in
+                        the vibrant Diamond Island (Koh Pich) area, the hotel provides easy access to shopping malls,
+                        restaurants, entertainment venues, business districts, and major attractions in the city.</p>
+                </div>
+                <p class="about-text-secondary"> The hotel features well-appointed rooms and suites designed with
+                    comfort and convenience in mind. Guests can enjoy modern amenities, complimentary Wi-Fi, comfortable
+                    bedding, private bathrooms, and a welcoming atmosphere throughout their stay.</p>
+                <button class="primary-btn dark-btn">VIEW OUR SERVICES</button>
+            </div>
+            <div class="about-images">
+                <div class="image-wrapper main-img">
+                    <img src="./img/about/hotelexterior.webp" alt="Hotel Exterior">
+                </div>
+                <div class="image-wrapper top-img">
+                    <img src="./img/about/roombalcony.jpg" alt="Hotel Balcony">
+                </div>
+                <div class="image-wrapper bottom-img">
+                    <img src="./img/about/swimmingpool.jpg" alt="Hotel Pool">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section" id="rooms">
+        <div class="rooms-grid">
+            <!-- Intro Block -->
+            <div class="rooms-intro">
+                <div class="intro-bg-pattern"></div>
+                <div class="intro-content">
+                    <div class="intro-subtitle-wrapper">
+                        <span class="intro-line"></span>
+                        <span class="intro-subtitle">Special selection</span>
+                        <span class="intro-line"></span>
+                    </div>
+                    <h2 class="intro-title">Popular Rooms And<br>Suites</h2>
+                    <div class="intro-icon">
+                        <i class="fa-regular fa-gem"></i>
+                    </div>
+                    <button class="outline-gold-btn">VIEW ALL ROOMS</button>
+                    <div class="intro-pagination carousel-indicators" style="position: relative; margin: 0; bottom: 0;">
+                        <button type="button" data-bs-target="#roomsCarouselDesktop" data-bs-slide-to="0" class="dot active"
+                            aria-current="true"
+                            style="text-indent:0; background:none; margin:0; opacity: 1; border: none; padding: 0;"></button>
+                        <button type="button" data-bs-target="#roomsCarouselDesktop" data-bs-slide-to="1" class="dot"
+                            style="text-indent:0; background:none; margin:0; opacity: 1; border: none; padding: 0;"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Wrapper spanning 3 columns -->
+            <div id="roomsCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+                style="grid-column: span 3; height: 100%; position: relative; overflow: hidden; border-radius: 12px;">
+                <div class="carousel-inner" style="height: 100%; overflow: visible;">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="height: 100%;">
+                        <div class="rooms-carousel-track"
+                            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; height: 100%;">
+                            <!-- Room Card 1 -->
+                            <div class="room-card">
+                                <img src="./img/rooms/studioking/studioking-bed.jpg" alt="Studio King" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Studio King</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 25 sqm Comfortable King Room,
+                                        ideal for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Room Card 2 -->
+                            <div class="room-card">
+                                <img src="./img/rooms/deluxeking/deluxeking-bed.jpg" alt="Deluxe King" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Deluxe King</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm Deluxe King Room, ideal
+                                        for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Room Card 3 -->
+                            <div class="room-card">
+                                <img src="./img/rooms/deluxetwinriverview/deluxekingriverview-bed.jpg"
+                                    alt="Deluxe Twin River View" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Deluxe Twin River View</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm River View with twin
+                                        bed, ideal for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Room Card 4 -->
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="height: 100%;">
+                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; height: 100%;">
+                            <!-- Room Card 4 -->
+                            <div class="room-card">
+                                <img src="./img/rooms/deluxetwincityview/deluxetwincityview-bed.jpg"
+                                    alt="Deluxe Twin City View" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Deluxe Twin City View</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm City View with twin
+                                        bed, ideal for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Global Nav Arrows -->
+                <div class="room-nav-arrows"
+                    style="position: absolute; bottom: 30px; right: 30px; display: flex; gap: 15px; z-index: 10;">
+                    <a class="nav-arrow-small prev" href="#roomsCarouselDesktop" role="button" data-bs-slide="prev"
+                        style="text-decoration: none; color: inherit;">
+                        <i class="fa-solid fa-caret-left"></i>
+                    </a>
+                    <a class="nav-arrow-small next" href="#roomsCarouselDesktop" role="button" data-bs-slide="next"
+                        style="text-decoration: none; color: inherit;">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <!-- Mobile Carousel Wrapper spanning 3 columns -->
+            <div id="roomsCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel"
+                style="grid-column: span 3; height: 100%; position: relative; overflow: hidden; border-radius: 12px;">
+                <div class="carousel-inner" style="height: 100%; overflow: visible;">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="height: 100%;">
+                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
+                            <div class="room-card">
+                                <img src="./img/rooms/studioking/studioking-bed.jpg" alt="Studio King" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Studio King</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 25 sqm Comfortable King Room,
+                                        ideal for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="height: 100%;">
+                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
+                            <div class="room-card">
+                                <img src="./img/rooms/deluxeking/deluxeking-bed.jpg" alt="Deluxe King" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Deluxe King</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm Deluxe King Room, ideal
+                                        for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="height: 100%;">
+                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
+                            <div class="room-card">
+                                <img src="./img/rooms/deluxetwinriverview/deluxekingriverview-bed.jpg"
+                                    alt="Deluxe Twin River View" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Deluxe Twin River View</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm River View with twin
+                                        bed, ideal for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item" style="height: 100%;">
+                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
+                            <div class="room-card">
+                                <img src="./img/rooms/deluxetwincityview/deluxetwincityview-bed.jpg"
+                                    alt="Deluxe Twin City View" class="room-bg">
+                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                                <div class="room-info">
+                                    <h3 class="room-title">Deluxe Twin City View</h3>
+                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm City View with twin
+                                        bed, ideal for up to 2 adults and 1 child.
+                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
+                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
+                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
+                                        request.</p>
+                                    <div class="room-footer" style="justify-content: flex-start;">
+                                        <div class="room-features">
+                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Global Nav Arrows -->
+                <div class="room-nav-arrows"
+                    style="position: absolute; bottom: 30px; right: 30px; display: flex; gap: 15px; z-index: 10;">
+                    <a class="nav-arrow-small prev" href="#roomsCarouselMobile" role="button" data-bs-slide="prev"
+                        style="text-decoration: none; color: inherit;">
+                        <i class="fa-solid fa-caret-left"></i>
+                    </a>
+                    <a class="nav-arrow-small next" href="#roomsCarouselMobile" role="button" data-bs-slide="next"
+                        style="text-decoration: none; color: inherit;">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Carousel is now properly moved up -->
+
+    
+<!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-bg-pattern"></div>
+
+        <div class="container services-container">
+            <!-- Header -->
+            <div class="services-header">
+                <span class="gold-line-top"></span>
+                <span class="services-subtitle">Enjoy your time in our Hotel with pleasure.</span>
+                <h2 class="services-title">Hotels Extra Services</h2>
+                <i class="fa-regular fa-heart header-icon"></i>
+            </div>
+
+            <!-- Carousel Area -->
+            <div class="services-carousel-wrapper">
+                <div class="nav-arrow-diamond prev">
+                    <div class="diamond-inner"></div>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card">
+                        <img src="./img/rooms/deluxetwincityview/deluxetwincityview-bed.jpg" alt="Room service"
+                            class="service-bg">
+                        <div class="service-overlay">
+                            <div class="service-inner-frame">
+                                <span class="gold-line-short"></span>
+                                <h3 class="service-name">Room Service</h3>
+                                <span class="service-subname">START RELAX BETTER</span>
+                                <div class="service-divider">
+                                    <span class="line"></span>
+                                    <i class="fa-regular fa-heart divider-icon"></i>
+                                    <span class="line"></span>
+                                </div>
+                                <span class="service-number">01.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card">
+                        <img src="./img/about/swimmingpool.jpg" alt="Indoor Swimming Pool" class="service-bg">
+                        <div class="service-overlay">
+                            <div class="service-inner-frame">
+                                <span class="gold-line-short"></span>
+                                <h3 class="service-name">Indoor Swimming Pool</h3>
+                                <span class="service-subname">QUALITY IS THE HEART</span>
+                                <div class="service-divider">
+                                    <span class="line"></span>
+                                    <i class="fa-regular fa-heart divider-icon"></i>
+                                    <span class="line"></span>
+                                </div>
+                                <span class="service-number">02.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card">
+                        <img src="./img/restuarant/restuarant.jpg" alt="The Restaurant Center" class="service-bg">
+                        <div class="service-overlay">
+                            <div class="service-inner-frame">
+                                <span class="gold-line-short"></span>
+                                <h3 class="service-name">The Restaurant Center</h3>
+                                <span class="service-subname">HOT & READY TO SERVE</span>
+                                <div class="service-divider">
+                                    <span class="line"></span>
+                                    <i class="fa-regular fa-heart divider-icon"></i>
+                                    <span class="line"></span>
+                                </div>
+                                <span class="service-number">03.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-arrow-diamond next">
+                    <div class="diamond-inner"></div>
+                </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div class="services-footer">
+                <button class="primary-btn dark-btn">GET IN TOUCH WITH US</button>
+                <div class="vertical-line-bottom"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-layout">
+            <!-- Intro Block -->
+            <div class="gallery-intro">
+                <div class="intro-bg-pattern"></div>
+                <div class="gallery-intro-content">
+                    <span class="gold-line-top"></span>
+                    <span class="services-subtitle">Enjoy your time in our Hotel with pleasure.</span>
+                    <h2 class="gallery-title">Our Gallery</h2>
+                    <div class="intro-icon"><i class="fa-regular fa-gem"></i></div>
+                </div>
+            </div>
+
+            <!-- Slider Track Container (Bootstrap Carousel) -->
+            <div class="gallery-track-container" style="overflow: hidden;">
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 100%;">
+                    <div class="carousel-inner" style="height: 100%; overflow: visible;">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active" style="height: 100%;">
+                            <div class="gallery-track">
+                                <!-- Image 1 -->
+                                <div class="gallery-item">
+                                    <div class="gallery-img-wrapper">
+                                        <img src="./img/about/hotelexterior.webp" alt="Hotel Interior">
+                                    </div>
+                                </div>
+
+                                <!-- Image 2 (Featured Wide) -->
+                                <div class="gallery-item featured">
+                                    <div class="gallery-img-wrapper">
+                                        <img src="./img/about/roombalcony.jpg" alt="Lounge Area">
+                                    </div>
+                                </div>
+
+                                <!-- Image 3 -->
+                                <div class="gallery-item">
+                                    <div class="gallery-img-wrapper last">
+                                        <img src="./img/about/swimmingpool.jpg" alt="Spa Area">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Global Controls -->
+                    <a class="gallery-nav left" href="#galleryCarousel" role="button" data-bs-slide="prev"
+                        style="text-decoration: none;">
+                        <div class="nav-arrow-diamond prev">
+                            <div class="diamond-inner"></div>
+                        </div>
+                    </a>
+
+                    <a class="gallery-nav right" href="#galleryCarousel" role="button" data-bs-slide="next"
+                        style="text-decoration: none;">
+                        <div class="nav-arrow-diamond next">
+                            <div class="diamond-inner"></div>
+                        </div>
+                    </a>
+
+                    <div class="gallery-pagination carousel-indicators"
+                        style="right: auto; left: 50%; transform: translateX(-50%); margin: 0; bottom: 30px;">
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="dot active"
+                            aria-current="true" style="text-indent:0; background:none; margin:0; opacity: 1;"></button>
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" class="dot"
+                            style="text-indent:0; background:none; margin:0; opacity: 1;"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts-section" id="contacts">
+
+        <div class="contacts-frame"></div>
+
+        <!-- Top Connector -->
+        <div class="contacts-top-connector"></div>
+
+        <div class="container contacts-container">
+            <div class="contacts-header">
+                <span class="gold-line-top" style="margin-bottom: 20px;"></span>
+                <span class="contacts-subtitle">Enjoy your time in our Hotel with pleasure.</span>
+                <h2 class="contacts-title">Our Contacts</h2>
+                <div class="contacts-icon" style="margin-bottom: 50px;">
+                    <i class="fa-regular fa-gem"></i>
+                </div>
+            </div>
+
+            <!-- Contact Information Box -->
+            <div class="contact-details-wrapper">
+
+                <!-- Info Cards Row -->
+                <div class="contact-cards-box">
+                    <div class="contact-card">
+                        <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3>Our Location</h3>
+                                <span class="gold-line-mini"></span>
+                            </div>
+                            <p>Building No. B-04 and A-01, Koh Pich Center, La Sein Street, Sangkat Tonle Bassac, Khan
+                                Chamkarmon, Phnom Penh, Cambodia.</p>
+                            <span class="card-highlight">Phnom Penh, Cambodia</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3>Our Phone</h3>
+                                <span class="gold-line-mini"></span>
+                            </div>
+                            <p>24-Hour hotel front-desk | 24-Hour Security</p>
+                            <span class="card-highlight">+(855)23-999166 &nbsp; +(855)23-999166</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3>Our Mail</h3>
+                                <span class="gold-line-mini"></span>
+                            </div>
+                            <p></p>
+                            <span class="card-highlight">diamondpearlhotelll168@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form and Map Row -->
+                <div class="contact-bottom-row">
+                    <!-- Form Side -->
+                    <div class="contact-form-box">
+                        <div class="card-title-row" style="margin-bottom: 30px;">
+                            <h3>Get In Touch</h3>
+                            <span class="gold-line-mini"></span>
+                        </div>
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <input type="text" placeholder="Your Name *">
+                                <input type="email" placeholder="Email Address *">
+                            </div>
+                            <textarea placeholder="Your Message:"></textarea>
+                            <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                        </form>
+                    </div>
+
+                    <!-- Map Side -->
+                    <div class="contact-map-box">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4677.612768928021!2d104.93612387574233!3d11.549078444465646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109511bbb04b15b%3A0x2c0a140a4674315d!2sDiamond%20Pearl%20Hotel!5e1!3m2!1sen!2skh!4v1789308230281!5m2!1sen!2skh"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <!-- Top Connector -->
+        <div class="footer-top-connector">
+            <div class="nav-arrow-diamond"
+                style="background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 2px;">
+                <div class="diamond-inner" style="background-color: #24222e; width: 4px; height: 4px;"></div>
+            </div>
+        </div>
+
+        <!-- Decorative Divider -->
+        <div class="footer-divider">
+            <span class="line"></span>
+            <div class="diamond-icon">
+                <div class="inner"></div>
+            </div>
+            <span class="line"></span>
+        </div>
+
+        <!-- Watermark Background -->
+        <div class="footer-watermark">Diamond Hotel</div>
+
+        <div class="container footer-container">
+            <div class="footer-row">
+                <!-- Column 1: About us -->
+                <div class="footer-col">
+                    <h4 class="footer-title">About us</h4>
+                    <p>Diamond Pearl Hotel & Residence is a modern and comfortable hotel in Phnom Penh, offering a
+                        relaxing stay for both business and leisure travelers. Conveniently located in the vibrant
+                        Diamond Island (Koh Pich) area, the hotel provides easy access to shopping malls, restaurants,
+                        entertainment venues, business districts, and major attractions in the city.</p>
+                    <a href="#" class="footer-link-gold">Read more</a>
+                </div>
+
+                <!-- Column 2: Contact info -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact info</h4>
+                    <ul class="contact-list">
+                        <li><span class="label">Call :</span> <span class="value">(855)23-999166</span>
+                        </li>
+                        <li><span class="label">Write :</span> <span
+                                class="value">diamondpearlhotelll168@gmail.com</span></li>
+                        <li><span class="label">Find us :</span> <span class="value">Phnom Penh, Cambodia</span></li>
+                    </ul>
+                    <a href="#" class="footer-link-gold">Get in Touch</a>
+                </div>
+
+                <!-- Column 3: Helpful links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Helpful links</h4>
+                    <ul class="links-list">
+                        <li><a href="#">OUR LAST NEWS</a></li>
+                        <li><a href="#">ROOMS</a></li>
+                        <li><a href="#">CONTACTS</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Subscribe -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Subscribe</h4>
+                    <p></p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container bottom-bar-container">
+                <div class="footer-logo">
+                    <img src="./img/logo/logo-footer.png" alt="Diamond Pearl Hotel" style="height: 40px; width: auto;">
+                </div>
+                <div class="copyright">
+                    © DIAMOND PEARL HOTEL 2026 . ALL RIGHTS RESERVED.
+                </div>
+                <div class="back-to-top">
+                    <a href="#">BACK TO TOP &nbsp;<i class="fa-solid fa-angle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
