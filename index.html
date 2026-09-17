@@ -16,7 +16,9 @@
     <!-- Bootstrap CSS for Gallery Carousel -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -25,7 +27,7 @@
         <div class="top-bar">
             <div class="container top-bar-container">
                 <div class="top-contact">
-                    <span class="label">CALL:</span> <span class="value">+85523 ​999​ 166</span>
+                    <span class="label">CALL:</span> <span class="value">+85523 ​999​ 166 / +85516 398 055</span>
                 </div>
 
                 <div class="top-social">
@@ -178,282 +180,137 @@
 
     <!-- Rooms Section -->
     <section class="rooms-section" id="rooms">
-        <div class="rooms-grid">
-            <!-- Intro Block -->
-            <div class="rooms-intro">
-                <div class="intro-bg-pattern"></div>
-                <div class="intro-content">
-                    <div class="intro-subtitle-wrapper">
-                        <span class="intro-line"></span>
-                        <span class="intro-subtitle">Special selection</span>
-                        <span class="intro-line"></span>
-                    </div>
-                    <h2 class="intro-title">Popular Rooms And<br>Suites</h2>
-                    <div class="intro-icon">
-                        <i class="fa-regular fa-gem"></i>
-                    </div>
-                    <button class="outline-gold-btn">VIEW ALL ROOMS</button>
-                    <div class="intro-pagination carousel-indicators" style="position: relative; margin: 0; bottom: 0;">
-                        <button type="button" data-bs-target="#roomsCarouselDesktop" data-bs-slide-to="0" class="dot active"
-                            aria-current="true"
-                            style="text-indent:0; background:none; margin:0; opacity: 1; border: none; padding: 0;"></button>
-                        <button type="button" data-bs-target="#roomsCarouselDesktop" data-bs-slide-to="1" class="dot"
-                            style="text-indent:0; background:none; margin:0; opacity: 1; border: none; padding: 0;"></button>
-                    </div>
-                </div>
+    <div class="rooms-layout">
+        <div class="rooms-intro">
+            <div class="intro-bg-pattern"></div>
+            <div class="rooms-intro-content">
+                <span class="gold-line-top"></span>
+                <span class="rooms-subtitle">Special selection</span>
+                <h2 class="rooms-title">Popular Rooms<br>And<br>Suites</h2>
+                <div class="intro-icon"><i class="fa-regular fa-gem"></i></div>
+                <a href="#rooms" class="outline-gold-btn">VIEW ALL ROOMS</a>
+                <div class="diamond-dot"></div>
             </div>
+        </div>
 
-            <!-- Carousel Wrapper spanning 3 columns -->
-            <div id="roomsCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
-                style="grid-column: span 3; height: 100%; position: relative; overflow: hidden; border-radius: 12px;">
-                <div class="carousel-inner" style="height: 100%; overflow: visible;">
-
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active" style="height: 100%;">
-                        <div class="rooms-carousel-track"
-                            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; height: 100%;">
-                            <!-- Room Card 1 -->
-                            <div class="room-card">
-                                <img src="./img/rooms/studioking/studioking-bed.jpg" alt="Studio King" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
+        <div class="rooms-carousel-container">
+            <div class="swiper roomsSwiper" style="height: 100%; padding-bottom: 50px;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="room-card" style="height: 100%;">
+                            <img src="./img/rooms/studioking/thumbnail.jpg" alt="Studio King" class="room-bg">
+                            <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="room-info">
+                                <a href="./suite/studioking.html" style="text-decoration: none; color: inherit;">
                                     <h3 class="room-title">Studio King</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 25 sqm Comfortable King Room,
-                                        ideal for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
+                                </a>
+                                <p class="room-desc">Enjoy a comfortable stay in our 25 sqm Comfortable King Room, ideal for up to 2 adults and 1 child. The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers, safety box, and complimentary bathroom amenities. Baby cot is available upon request.</p>
+                                <div class="room-footer">
+                                    <div class="room-features">
+                                        <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                        <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                        <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
                                     </div>
+                                    <div class="room-price" data-room="studioking">$120 / Night</div>
                                 </div>
                             </div>
-
-                            <!-- Room Card 2 -->
-                            <div class="room-card">
-                                <img src="./img/rooms/deluxeking/deluxeking-bed.jpg" alt="Deluxe King" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="room-card" style="height: 100%;">
+                            <img src="./img/rooms/deluxeking/thumbnail.jpg" alt="Deluxe King" class="room-bg">
+                            <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="room-info">
+                                <a href="./suite/deluxeking.html" style="text-decoration: none; color: inherit;">
                                     <h3 class="room-title">Deluxe King</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm Deluxe King Room, ideal
-                                        for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
+                                </a>
+                                <p class="room-desc">Enjoy a comfortable stay in our 35 sqm Deluxe King Room, ideal for up to 2 adults and 1 child. The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers, safety box, and complimentary bathroom amenities. Baby cot is available upon request.</p>
+                                <div class="room-footer">
+                                    <div class="room-features">
+                                        <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                        <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                        <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
                                     </div>
+                                    <div class="room-price" data-room="deluxeking">$120 / Night</div>
                                 </div>
                             </div>
-
-                            <!-- Room Card 3 -->
-                            <div class="room-card">
-                                <img src="./img/rooms/deluxetwinriverview/deluxekingriverview-bed.jpg"
-                                    alt="Deluxe Twin River View" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
-                                    <h3 class="room-title">Deluxe Twin River View</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm River View with twin
-                                        bed, ideal for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Room Card 4 -->
                         </div>
                     </div>
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" style="height: 100%;">
-                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; height: 100%;">
-                            <!-- Room Card 4 -->
-                            <div class="room-card">
-                                <img src="./img/rooms/deluxetwincityview/deluxetwincityview-bed.jpg"
-                                    alt="Deluxe Twin City View" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
+                    <div class="swiper-slide">
+                        <div class="room-card" style="height: 100%;">
+                            <img src="./img/rooms/deluxetwincityview/thumbnail.jpg" alt="Deluxe Twin City View" class="room-bg">
+                            <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="room-info">
+                                <a href="./suite/deluxetwincityview.html" style="text-decoration: none; color: inherit;">
                                     <h3 class="room-title">Deluxe Twin City View</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm City View with twin
-                                        bed, ideal for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
+                                </a>
+                                <p class="room-desc">Enjoy a comfortable stay in our 35 sqm City View with twin bed, ideal for up to 2 adults and 1 child. The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers, safety box, and complimentary bathroom amenities. Baby cot is available upon request.</p>
+                                <div class="room-footer">
+                                    <div class="room-features">
+                                        <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                        <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                        <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
                                     </div>
+                                    <div class="room-price" data-room="deluxetwincityview">$120 / Night</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
-
-                <!-- Global Nav Arrows -->
-                <div class="room-nav-arrows"
-                    style="position: absolute; bottom: 30px; right: 30px; display: flex; gap: 15px; z-index: 10;">
-                    <a class="nav-arrow-small prev" href="#roomsCarouselDesktop" role="button" data-bs-slide="prev"
-                        style="text-decoration: none; color: inherit;">
-                        <i class="fa-solid fa-caret-left"></i>
-                    </a>
-                    <a class="nav-arrow-small next" href="#roomsCarouselDesktop" role="button" data-bs-slide="next"
-                        style="text-decoration: none; color: inherit;">
-                        <i class="fa-solid fa-caret-right"></i>
-                    </a>
-                </div>
-            </div>
-            </div>
-            <!-- Mobile Carousel Wrapper spanning 3 columns -->
-            <div id="roomsCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel"
-                style="grid-column: span 3; height: 100%; position: relative; overflow: hidden; border-radius: 12px;">
-                <div class="carousel-inner" style="height: 100%; overflow: visible;">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active" style="height: 100%;">
-                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
-                            <div class="room-card">
-                                <img src="./img/rooms/studioking/studioking-bed.jpg" alt="Studio King" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
-                                    <h3 class="room-title">Studio King</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 25 sqm Comfortable King Room,
-                                        ideal for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" style="height: 100%;">
-                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
-                            <div class="room-card">
-                                <img src="./img/rooms/deluxeking/deluxeking-bed.jpg" alt="Deluxe King" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
-                                    <h3 class="room-title">Deluxe King</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm Deluxe King Room, ideal
-                                        for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="carousel-item" style="height: 100%;">
-                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
-                            <div class="room-card">
-                                <img src="./img/rooms/deluxetwinriverview/deluxekingriverview-bed.jpg"
-                                    alt="Deluxe Twin River View" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
+                    <div class="swiper-slide">
+                        <div class="room-card" style="height: 100%;">
+                            <img src="./img/rooms/deluxeriverview/thumbnail.jpg" alt="Deluxe Twin River View" class="room-bg">
+                            <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="room-info">
+                                <a href="./suite/deluxeriverview.html" style="text-decoration: none; color: inherit;">
                                     <h3 class="room-title">Deluxe Twin River View</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm River View with twin
-                                        bed, ideal for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
+                                </a>
+                                <p class="room-desc">Enjoy a comfortable stay in our 35 sqm River View with twin bed, ideal for up to 2 adults and 1 child. The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers, safety box, and complimentary bathroom amenities. Baby cot is available upon request.</p>
+                                <div class="room-footer">
+                                    <div class="room-features">
+                                        <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                        <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                        <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
                                     </div>
+                                    <div class="room-price" data-room="deluxeriverview">$120 / Night</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 4 -->
-                    <div class="carousel-item" style="height: 100%;">
-                        <div class="rooms-carousel-track" style="display: grid; grid-template-columns: 1fr; height: 100%;">
-                            <div class="room-card">
-                                <img src="./img/rooms/deluxetwincityview/deluxetwincityview-bed.jpg"
-                                    alt="Deluxe Twin City View" class="room-bg">
-                                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
-                                <div class="room-info">
-                                    <h3 class="room-title">Deluxe Twin City View</h3>
-                                    <p class="room-desc">Enjoy a comfortable stay in our 35 sqm City View with twin
-                                        bed, ideal for up to 2 adults and 1 child.
-                                        The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with
-                                        TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers,
-                                        safety box, and complimentary bathroom amenities. Baby cot is available upon
-                                        request.</p>
-                                    <div class="room-footer" style="justify-content: flex-start;">
-                                        <div class="room-features">
-                                            <span><i class="fa-regular fa-user"></i> 2 Guest</span>
-                                            <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
-                                            <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
-                                        </div>
+                    <div class="swiper-slide">
+                        <div class="room-card" style="height: 100%;">
+                            <img src="./img/rooms/executivesuite/thumbnail.jpg" alt="Executive Suite" class="room-bg">
+                            <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                            <div class="room-info">
+                                <a href="./suite/executivesuite.html" style="text-decoration: none; color: inherit;">
+                                    <h3 class="room-title">Executive Suite</h3>
+                                </a>
+                                <p class="room-desc">Enjoy a comfortable stay in our luxurious Executive Suite, ideal for up to 2 adults and 1 child. The room features a king-size bed, air conditioning, high-speed Wi-Fi, TV with TV Box, mini bar, tea and coffee facilities, hairdryer, bathrobe, slippers, safety box, and complimentary bathroom amenities. Baby cot is available upon request.</p>
+                                <div class="room-footer">
+                                    <div class="room-features">
+                                        <span><i class="fa-regular fa-user"></i> 2 Guest</span>
+                                        <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                        <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
                                     </div>
+                                    <div class="room-price" data-room="executivesuite">$120 / Night</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Global Nav Arrows -->
-                <div class="room-nav-arrows"
-                    style="position: absolute; bottom: 30px; right: 30px; display: flex; gap: 15px; z-index: 10;">
-                    <a class="nav-arrow-small prev" href="#roomsCarouselMobile" role="button" data-bs-slide="prev"
-                        style="text-decoration: none; color: inherit;">
-                        <i class="fa-solid fa-caret-left"></i>
-                    </a>
-                    <a class="nav-arrow-small next" href="#roomsCarouselMobile" role="button" data-bs-slide="next"
-                        style="text-decoration: none; color: inherit;">
-                        <i class="fa-solid fa-caret-right"></i>
-                    </a>
+                <!-- Swiper Pagination and Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                    <div class="nav-arrow-diamond prev"><div class="diamond-inner"></div></div>
+                </div>
+                <div class="swiper-button-next">
+                    <div class="nav-arrow-diamond next"><div class="diamond-inner"></div></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Mobile Carousel is now properly moved up -->
-
-    
-<!-- Services Section -->
-    <section class="services-section" id="services">
+        <section class="services-section" id="services">
         <div class="services-bg-pattern"></div>
 
         <div class="container services-container">
@@ -474,8 +331,7 @@
                 <div class="services-grid">
                     <!-- Service Card 1 -->
                     <div class="service-card">
-                        <img src="./img/rooms/deluxetwincityview/deluxetwincityview-bed.jpg" alt="Room service"
-                            class="service-bg">
+                        <img src="./img/rooms/deluxetwincityview/thumbnail.jpg" alt="Room service" class="service-bg">
                         <div class="service-overlay">
                             <div class="service-inner-frame">
                                 <span class="gold-line-short"></span>
@@ -557,31 +413,34 @@
             </div>
 
             <!-- Slider Track Container (Bootstrap Carousel) -->
-            <div class="gallery-track-container" style="overflow: hidden;">
+            <div class="gallery-track-container" style="position: relative;">
                 <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 100%;">
-                    <div class="carousel-inner" style="height: 100%; overflow: visible;">
+                    <div class="carousel-inner" style="height: 100%;">
                         <!-- Slide 1 -->
                         <div class="carousel-item active" style="height: 100%;">
                             <div class="gallery-track">
                                 <!-- Image 1 -->
-                                <div class="gallery-item">
-                                    <div class="gallery-img-wrapper">
+                                <div class="gallery-item" style="height: 100%;">
+                                    <a href="./img/about/hotelexterior.webp" data-fancybox="gallery"
+                                        class="gallery-img-wrapper" style="display: block;">
                                         <img src="./img/about/hotelexterior.webp" alt="Hotel Interior">
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Image 2 (Featured Wide) -->
-                                <div class="gallery-item featured">
-                                    <div class="gallery-img-wrapper">
+                                <div class="gallery-item featured" style="height: 100%;">
+                                    <a href="./img/about/roombalcony.jpg" data-fancybox="gallery"
+                                        class="gallery-img-wrapper" style="display: block;">
                                         <img src="./img/about/roombalcony.jpg" alt="Lounge Area">
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Image 3 -->
-                                <div class="gallery-item">
-                                    <div class="gallery-img-wrapper last">
+                                <div class="gallery-item" style="height: 100%;">
+                                    <a href="./img/about/swimmingpool.jpg" data-fancybox="gallery"
+                                        class="gallery-img-wrapper last" style="display: block;">
                                         <img src="./img/about/swimmingpool.jpg" alt="Spa Area">
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -614,6 +473,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Contacts Section -->
     <section class="contacts-section" id="contacts">
@@ -745,7 +606,8 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Contact info</h4>
                     <ul class="contact-list">
-                        <li><span class="label">Call :</span> <span class="value">(855)23-999166</span>
+                        <li><span class="label">Call :</span> <span class="value">(855)23-999166 / (855)16 398
+                                055</span>
                         </li>
                         <li><span class="label">Write :</span> <span
                                 class="value">diamondpearlhotelll168@gmail.com</span></li>
@@ -802,8 +664,53 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS for Gallery Carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            backdropClick: "close",
+            on: {
+                reveal: (fancybox, slide) => {
+                    const image = slide.$el.querySelector(".f-image");
+                    if (image) {
+                        image.style.cursor = "pointer";
+                        image.addEventListener("click", () => {
+                            fancybox.close();
+                        });
+                    }
+                }
+            }
+        });
+    </script>
     <script src="js/script.js"></script>
+    <script src="js/prices.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".roomsSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
