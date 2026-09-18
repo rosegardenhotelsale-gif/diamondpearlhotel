@@ -1798,7 +1798,6 @@ button {
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 /* Contact Bottom Row */
@@ -2532,5 +2531,6 @@ button {
          m a r g i n - t o p :   0 ; 
          t r a n s f o r m :   t r a n s l a t e Y ( - 5 0 % ) ; 
  } 
-  
+ 
+ 
  
