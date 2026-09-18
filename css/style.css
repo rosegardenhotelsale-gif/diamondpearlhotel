@@ -1794,7 +1794,7 @@ button {
 }
 
 .card-highlight {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: 1px;
