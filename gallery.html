@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Diamond Pearl Hotel & Residence Phnom Penh</title>
+    <meta name="description"
+        content="Explore the photo gallery of Diamond Pearl Hotel & Residence in Koh Pich, Phnom Penh. View our luxury suites, swimming pool, gourmet restaurant, and hotel facilities.">
+
+    <!-- Fonts: Playfair Display for headings, Jost for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Fancybox 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- Site Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-contact">
+                <span class="label">CALL:</span> <span class="value">+85523 999 166 / +85516 398 055</span>
+            </div>
+
+            <div class="top-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <div class="top-right">
+                <div class="lang-switch">
+                    <span class="active">En</span> / <span>CN</span>
+                </div>
+                <div class="booking-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="booking-text" style="display: none;">Our ratings on Booking.com</span>
+                    <div class="score">4.9</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/logo/logo.png" alt="Diamond Pearl Hotel" class="header-logo"
+                        style="height: 90px; width: auto;">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#services">SERVICES</a></li>
+                    <li><a href="index.html#rooms">ROOMS</a></li>
+                    <li><a href="gallery.html" class="active">GALLERY</a></li>
+                    <li><a href="index.html#contacts">CONTACTS</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://us2.cloudbeds.com/reservation/uU4AwC" target="_blank" rel="noopener">
+                    <button class="primary-btn search-btn">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        BOOK NOW
+                    </button>
+                </a>
+                <div class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="gallery-page-hero">
+        <div class="container">
+            <span class="gallery-page-subtitle">A Visual Journey</span>
+            <h1 class="gallery-page-title">Photo Gallery</h1>
+            <div class="gallery-divider">
+                <span class="line"></span>
+                <i class="fa-regular fa-gem"></i>
+                <span class="line"></span>
+            </div>
+            <div class="gallery-breadcrumbs">
+                <a href="index.html">HOME</a>
+                <span>/</span>
+                <span class="current">GALLERY</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Content Section -->
+    <main class="gallery-page-section">
+        <div class="container">
+
+            <!-- Category Filter Tabs -->
+            <div class="gallery-filter-wrap" role="tablist" aria-label="Gallery category filters">
+                <button type="button" class="gallery-filter-btn active" data-filter="all">
+                    All Photos <span class="count">(23)</span>
+                </button>
+                <button type="button" class="gallery-filter-btn" data-filter="rooms">
+                    Rooms &amp; Suites <span class="count">(16)</span>
+                </button>
+                <button type="button" class="gallery-filter-btn" data-filter="exterior">
+                    Hotel &amp; Lobby <span class="count">(2)</span>
+                </button>
+                <button type="button" class="gallery-filter-btn" data-filter="dining">
+                    Dining &amp; Bar <span class="count">(1)</span>
+                </button>
+                <button type="button" class="gallery-filter-btn" data-filter="facilities">
+                    Pool &amp; Facilities <span class="count">(4)</span>
+                </button>
+            </div>
+
+            <!-- Photos Grid -->
+            <div class="gallery-photo-grid" id="galleryGrid">
+
+                <!-- 1. Hotel Exterior -->
+                <div class="gallery-card" data-category="exterior">
+                    <a href="./img/about/hotelexterior.webp" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Hotel Exterior &amp; Architecture &mdash; Diamond Pearl Hotel in Koh Pich, Phnom Penh">
+                        <img src="./img/about/hotelexterior.webp" alt="Diamond Pearl Hotel Exterior" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Hotel &amp; Lobby</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Grand Exterior</h4>
+                                <p>Modern architectural landmark in Diamond Island</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 2. Swimming Pool -->
+                <div class="gallery-card" data-category="facilities">
+                    <a href="./img/about/swimmingpool.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Outdoor Swimming Pool &mdash; Refresh and unwind with city views">
+                        <img src="./img/about/swimmingpool.jpg" alt="Outdoor Swimming Pool" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Pool &amp; Facilities</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Outdoor Swimming Pool</h4>
+                                <p>Refreshing rooftop pool overlooking Phnom Penh</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 3. Restaurant -->
+                <div class="gallery-card" data-category="dining">
+                    <a href="./img/restuarant/restuarant.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Diamond Pearl Restaurant &mdash; Fine dining, Asian specialties &amp; Western cuisine">
+                        <img src="./img/restuarant/restuarant.jpg" alt="Diamond Pearl Restaurant" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Dining &amp; Bar</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Gourmet Restaurant</h4>
+                                <p>Culinary excellence with elegant ambiance</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 4. Grand Entrance -->
+                <div class="gallery-card" data-category="exterior">
+                    <a href="./img/slide/slide1.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Hotel Reception &amp; Entrance &mdash; Warm hospitality 24 hours a day">
+                        <img src="./img/slide/slide1.jpg" alt="Hotel Entrance and Reception" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Hotel &amp; Lobby</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Entrance &amp; Reception</h4>
+                                <p>Luxurious front desk and warm guest reception</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 5. Executive Lounge -->
+                <div class="gallery-card" data-category="facilities">
+                    <a href="./img/slide/slide2.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="VIP Guest Lounge &mdash; Relaxation area with premium comfort">
+                        <img src="./img/slide/slide2.jpg" alt="VIP Guest Lounge" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Pool &amp; Facilities</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>VIP Guest Lounge</h4>
+                                <p>Sophisticated atmosphere for leisure or casual meetings</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 6. Balcony View -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/about/roombalcony.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Private Suite Balcony &mdash; Panoramic cityscape and fresh evening breeze">
+                        <img src="./img/about/roombalcony.jpg" alt="Private Suite Balcony" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Private Balcony</h4>
+                                <p>Peaceful outdoor corner overlooking Koh Pich</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 7. Executive Suite Master Bed -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/executivesuite/thumbnail.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Executive Suite Master Bedroom &mdash; King bed, 50 sqm luxury living">
+                        <img src="./img/rooms/executivesuite/thumbnail.jpg" alt="Executive Suite Master Bedroom"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Executive Suite Bedroom</h4>
+                                <p>Plush king bed with expansive floor plan</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 8. Executive Suite Living -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/executivesuite/gallery-1.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Executive Suite Living Area &mdash; Separate sitting lounge with Smart TV">
+                        <img src="./img/rooms/executivesuite/gallery-1.jpg" alt="Executive Suite Living Area"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Executive Suite Living Room</h4>
+                                <p>Dedicated living space for relaxation or meetings</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 9. Executive Suite Bathroom -->
+                <div class="gallery-card" data-category="facilities">
+                    <a href="./img/rooms/executivesuite/studioking-bathroom-1.jpg" class="gallery-card-link"
+                        data-fancybox="hotel-gallery"
+                        data-caption="Luxury Marble Bathroom &mdash; Deep soaking bathtub, glass shower, premium toiletries">
+                        <img src="./img/rooms/executivesuite/studioking-bathroom-1.jpg" alt="Luxury Marble Bathroom"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Pool &amp; Facilities</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Marble Bathroom</h4>
+                                <p>Soaking bathtub, rain shower and plush bathrobes</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 10. Deluxe King Bed -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeking/thumbnail.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Deluxe King Room &mdash; 35 sqm with plush king mattress and city view">
+                        <img src="./img/rooms/deluxeking/thumbnail.jpg" alt="Deluxe King Room" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Deluxe King Room</h4>
+                                <p>Refined comfort designed for restful sleep</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 11. Deluxe King Gallery 1 -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeking/gallery-1.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Deluxe King Interior &mdash; Warm lighting, work area &amp; high-speed Wi-Fi">
+                        <img src="./img/rooms/deluxeking/gallery-1.jpg" alt="Deluxe King Interior" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Deluxe King Interior</h4>
+                                <p>Harmonious color palette with warm wood finishes</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 12. Deluxe King Gallery 2 -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeking/gallery-2.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Deluxe King Amenities &mdash; Safety box, minibar &amp; coffee/tea station">
+                        <img src="./img/rooms/deluxeking/gallery-2.jpg" alt="Deluxe King Amenities" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>In-Room Amenities</h4>
+                                <p>Thoughtfully equipped for short and extended stays</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 13. Deluxe King Gallery 3 -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeking/gallery-3.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Deluxe King Panoramic Windows &mdash; Natural light and cityscape views">
+                        <img src="./img/rooms/deluxeking/gallery-3.jpg" alt="Deluxe King Windows" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Deluxe King Daylight</h4>
+                                <p>Expansive glass windows with blackout drapery</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 14. Deluxe Twin River View -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeriverview/thumbnail.jpg" class="gallery-card-link"
+                        data-fancybox="hotel-gallery"
+                        data-caption="Deluxe Twin River View &mdash; Twin beds overlooking the Bassac River">
+                        <img src="./img/rooms/deluxeriverview/thumbnail.jpg" alt="Deluxe Twin River View"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Deluxe Twin River View</h4>
+                                <p>Scenic river vistas and comfortable twin bedding</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 15. River View Gallery 1 -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeriverview/gallery-1.jpg" class="gallery-card-link"
+                        data-fancybox="hotel-gallery"
+                        data-caption="Deluxe River View Lounge &mdash; Relaxing corner with entertainment center">
+                        <img src="./img/rooms/deluxeriverview/gallery-1.jpg" alt="Deluxe River View Lounge"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>River View Lounge</h4>
+                                <p>Cozy armchairs with flat-screen TV and TV box</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 16. River View Amenities -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxeriverview/deluxetwincityview-amenities.jpg" class="gallery-card-link"
+                        data-fancybox="hotel-gallery"
+                        data-caption="Tea &amp; Coffee Facilities &mdash; Complimentary refreshments for every guest">
+                        <img src="./img/rooms/deluxeriverview/deluxetwincityview-amenities.jpg"
+                            alt="Tea and Coffee Amenities" class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Beverage Station</h4>
+                                <p>Electric kettle, fine teas, and fresh daily coffee</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 17. Deluxe Twin City View -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxetwincityview/thumbnail.jpg" class="gallery-card-link"
+                        data-fancybox="hotel-gallery"
+                        data-caption="Deluxe Twin City View &mdash; Ideal for travel companions with island city views">
+                        <img src="./img/rooms/deluxetwincityview/thumbnail.jpg" alt="Deluxe Twin City View"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Deluxe Twin City View</h4>
+                                <p>Vibrant views of Phnom Penh's booming island district</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 18. City View Balcony -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/deluxetwincityview/deluxetwincityview-balcony.jpg" class="gallery-card-link"
+                        data-fancybox="hotel-gallery"
+                        data-caption="City View Balcony &mdash; Private outdoor seating overlooking city skyline">
+                        <img src="./img/rooms/deluxetwincityview/deluxetwincityview-balcony.jpg"
+                            alt="City View Balcony" class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Balcony Seating</h4>
+                                <p>Private outdoor haven for fresh morning coffee</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 19. Studio King Suite -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/studioking/thumbnail.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Studio King Suite &mdash; Open-concept layout with kitchenette and living space">
+                        <img src="./img/rooms/studioking/thumbnail.jpg" alt="Studio King Suite" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Studio King Suite</h4>
+                                <p>Self-contained suite tailored for comfort and convenience</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 20. Studio King Gallery 2 -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/studioking/gallery-2.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Studio King Lounge Area &mdash; Comfortable seating and natural daylight">
+                        <img src="./img/rooms/studioking/gallery-2.jpg" alt="Studio King Lounge" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Studio Living Corner</h4>
+                                <p>Modern ambiance with contemporary furnishings</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 21. Presidential Suite Ambience -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/slide/slide3.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Presidential Suite Ambience &mdash; Grand design and unmatched hospitality">
+                        <img src="./img/slide/slide3.jpg" alt="Presidential Suite Interior" class="gallery-card-img"
+                            loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Presidential Suite</h4>
+                                <p>Ultimate luxury and state-of-the-art furnishings</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 22. Executive Suite Details -->
+                <div class="gallery-card" data-category="rooms">
+                    <a href="./img/rooms/executivesuite/gallery-2.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="Executive Suite Work Station &mdash; Ergonomic desk for business travelers">
+                        <img src="./img/rooms/executivesuite/gallery-2.jpg" alt="Executive Suite Workspace"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Rooms &amp; Suites</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Executive Work Desk</h4>
+                                <p>Quiet setting with ergonomic desk and fast Wi-Fi</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 23. Studio King Wardrobe -->
+                <div class="gallery-card" data-category="facilities">
+                    <a href="./img/rooms/executivesuite/gallery-3.jpg" class="gallery-card-link" data-fancybox="hotel-gallery"
+                        data-caption="In-Room Wardrobe &mdash; Bathrobe, soft slippers &amp; electronic safe box">
+                        <img src="./img/rooms/executivesuite/gallery-3.jpg" alt="Suite Wardrobe &amp; Amenities"
+                            class="gallery-card-img" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">Pool &amp; Facilities</span>
+                            <div class="gallery-card-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            <div class="gallery-card-caption">
+                                <h4>Wardrobe &amp; Safe</h4>
+                                <p>Electronic safe, plush slippers and silk bathrobes</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Call to Action Banner -->
+            <div class="gallery-cta-wrap">
+                <span class="gallery-cta-subtitle">YOUR LUXURY RETREAT IN PHNOM PENH</span>
+                <h2 class="gallery-cta-title">Ready to Experience It in Person?</h2>
+                <p class="gallery-cta-desc">
+                    Book directly with us for guaranteed best rates, complimentary high-speed Wi-Fi, and priority check-in.
+                    Our 24-hour front desk is ready to make your stay unforgettable.
+                </p>
+                <a href="https://us2.cloudbeds.com/reservation/uU4AwC" target="_blank" rel="noopener"
+                    class="gallery-cta-btn">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    RESERVE YOUR STAY NOW
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-row">
+                <!-- Column 1: About us -->
+                <div class="footer-col">
+                    <h4 class="footer-title">About us</h4>
+                    <p>Diamond Pearl Hotel &amp; Residence is a modern and comfortable hotel in Phnom Penh, offering a
+                        relaxing stay for both business and leisure travelers. Conveniently located in the vibrant
+                        Diamond Island (Koh Pich) area, the hotel provides easy access to shopping malls, restaurants,
+                        entertainment venues, business districts, and major attractions in the city.</p>
+                    <a href="index.html#about" class="footer-link-gold">Read more</a>
+                </div>
+
+                <!-- Column 2: Contact info -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact info</h4>
+                    <ul class="contact-list">
+                        <li><span class="label">Call :</span> <span class="value">(855)16 398 055 / (855)23 999166</span>
+                        </li>
+                        <li><span class="label">Write :</span> <span
+                                class="value">diamondpearlhotelll168@gmail.com</span></li>
+                        <li><span class="label">Sales :</span> <span
+                                class="value">sales.diamondpearlhotel@gmail.com</span></li>
+                        <li><span class="label">Web :</span> <span class="value">www.diamondpearlhotel.com</span></li>
+                        <li><span class="label">Find us :</span> <span class="value">Building B-04 &amp; A-01, Koh Pich
+                                Center, Phnom Penh, Cambodia</span></li>
+                    </ul>
+                    <a href="index.html#contacts" class="footer-link-gold">Get in Touch</a>
+                </div>
+
+                <!-- Column 3: Helpful links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Helpful links</h4>
+                    <ul class="links-list">
+                        <li><a href="index.html#rooms">ROOMS &amp; SUITES</a></li>
+                        <li><a href="gallery.html">PHOTO GALLERY</a></li>
+                        <li><a href="index.html#about">ABOUT OUR HOTEL</a></li>
+                        <li><a href="index.html#services">SERVICES &amp; AMENITIES</a></li>
+                        <li><a href="index.html#contacts">CONTACT &amp; MAP</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Subscribe -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Subscribe</h4>
+                    <p>Stay updated with our latest promotions and seasonal packages.</p>
+                    <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container bottom-bar-container">
+                <div class="footer-logo">
+                    <img src="./img/logo/logo-footer.png" alt="Diamond Pearl Hotel" style="height: 40px; width: auto;">
+                </div>
+                <div class="copyright">
+                    &copy; DIAMOND PEARL HOTEL 2026 . ALL RIGHTS RESERVED.
+                </div>
+                <div class="back-to-top">
+                    <a href="#">BACK TO TOP &nbsp;<i class="fa-solid fa-angle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Gallery Filter & Lightbox Logic -->
+    <script>
+        // Initialize Fancybox 5
+        Fancybox.bind('[data-fancybox="hotel-gallery"]', {
+            Thumbs: {
+                autoStart: true
+            },
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW", "flipX", "flipY"],
+                    right: ["slideshow", "thumbs", "close"]
+                }
+            },
+            backdropClick: "close"
+        });
+
+        // Filter Tabs
+        const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+        const galleryCards = document.querySelectorAll('.gallery-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.classList.remove('hide');
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(15px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

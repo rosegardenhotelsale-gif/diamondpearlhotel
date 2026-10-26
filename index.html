@@ -440,6 +440,7 @@
                     <span class="services-subtitle">Enjoy your time in our Hotel with pleasure.</span>
                     <h2 class="gallery-title">Our Gallery</h2>
                     <div class="intro-icon"><i class="fa-regular fa-gem"></i></div>
+                    <a href="gallery.html" class="outline-btn" style="margin-top: 18px; font-size: 13px; padding: 10px 22px; display: inline-block;">VIEW ALL PHOTOS &rarr;</a>
                 </div>
             </div>
 
@@ -653,11 +654,11 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Helpful links</h4>
                     <ul class="links-list">
-                        <li><a href="#">OUR LAST NEWS</a></li>
-                        <li><a href="#">ROOMS</a></li>
-                        <li><a href="#">CONTACTS</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="#rooms">ROOMS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="#contacts">CONTACTS</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#services">SERVICES</a></li>
                     </ul>
                 </div>
 
@@ -704,18 +705,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
         Fancybox.bind('[data-fancybox="gallery"]', {
-            backdropClick: "close",
-            on: {
-                reveal: (fancybox, slide) => {
-                    const image = slide.$el.querySelector(".f-image");
-                    if (image) {
-                        image.style.cursor = "pointer";
-                        image.addEventListener("click", () => {
-                            fancybox.close();
-                        });
-                    }
-                }
-            }
+            backdropClick: "close"
         });
     </script>
     <script src="js/script.js"></script>

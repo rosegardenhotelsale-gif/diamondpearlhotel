@@ -113,16 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
     }
 
-    // Touch events
-    heroWrapper.addEventListener('touchstart', dragStart);
-    heroWrapper.addEventListener('touchmove', dragMove);
-    heroWrapper.addEventListener('touchend', dragEnd);
+    // Touch & Mouse events for hero slider
+    if (heroWrapper) {
+        heroWrapper.addEventListener('touchstart', dragStart);
+        heroWrapper.addEventListener('touchmove', dragMove);
+        heroWrapper.addEventListener('touchend', dragEnd);
 
-    // Mouse events
-    heroWrapper.addEventListener('mousedown', dragStart);
-    heroWrapper.addEventListener('mousemove', dragMove);
-    heroWrapper.addEventListener('mouseup', dragEnd);
-    heroWrapper.addEventListener('mouseleave', dragEnd);
+        heroWrapper.addEventListener('mousedown', dragStart);
+        heroWrapper.addEventListener('mousemove', dragMove);
+        heroWrapper.addEventListener('mouseup', dragEnd);
+        heroWrapper.addEventListener('mouseleave', dragEnd);
+    }
 
     // Custom Gallery JS removed to use Bootstrap Carousel
 
@@ -194,10 +195,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainHeader = document.querySelector('.main-header');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            mainHeader.classList.add('sticky');
-        } else {
-            mainHeader.classList.remove('sticky');
+        if (mainHeader) {
+            if (window.scrollY > 50) {
+                mainHeader.classList.add('sticky');
+            } else {
+                mainHeader.classList.remove('sticky');
+            }
         }
     });
 
@@ -218,4 +221,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Close Fancybox on black screen click or tap
+    function handleFancyboxBackdropClose(e) {
+        const container = document.querySelector('.fancybox__container');
+        if (!container || container.classList.contains('is-closing')) return;
+
+        // If clicking on image, toolbar, close button, navigation buttons, or thumbs: do nothing
+        if (e.target.closest('img') ||
+            e.target.closest('.f-panzoom__content') ||
+            e.target.closest('.fancybox__toolbar') ||
+            e.target.closest('.fancybox__nav') ||
+            e.target.closest('.fancybox__thumbs') ||
+            e.target.closest('.f-button') ||
+            e.target.closest('button') ||
+            e.target.closest('.fancybox__caption')) {
+            return;
+        }
+
+        // If clicking anywhere else inside Fancybox (black background / backdrop / slide / panzoom)
+        if (e.target.closest('.fancybox__container')) {
+            if (window.Fancybox && typeof window.Fancybox.getInstance === 'function') {
+                const instance = window.Fancybox.getInstance();
+                if (instance) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    instance.close();
+                }
+            }
+        }
+    }
+
+    document.addEventListener('click', handleFancyboxBackdropClose, true);
+    document.addEventListener('touchend', handleFancyboxBackdropClose, true);
 });
